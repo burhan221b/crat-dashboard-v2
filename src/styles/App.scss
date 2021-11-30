@@ -10,12 +10,18 @@ html {
 
 // If theme is switched to Dark
 html[data-theme="dark"] {
-  --bg: #434343;
-  --bg-panel: #333333;
+  --bg: #333333;
+  --bg-panel: rgb(94 94 94);
   --color-headings: #3694ff;
   --color-headings-hover: #0077ff;
   --color-text: #b5b5b5;
-  --bg-container: rgb(138, 138, 138);
+  --bg-container: #434343;
+  // --bg: #434343;
+  // --bg-panel: #333333;
+  // --color-headings: #3694ff;
+  // --color-headings-hover: #0077ff;
+  // --color-text: #b5b5b5;
+  // --bg-container: rgb(138, 138, 138);
 }
 
 .App {
@@ -36,6 +42,10 @@ html[data-theme="dark"] {
     color: var(--color-headings);
   }
   p {
+    color: var(--color-text);
+  }
+  a {
+    text-decoration: none;
     color: var(--color-text);
   }
 }
@@ -123,7 +133,7 @@ html[data-theme="dark"] {
     flex-wrap: wrap;
     .ul-settings-list {
       li {
-        border: 1px solid gray;
+        border: 1px solid var(--color-text);
         text-align: center;
         padding: 1em;
       }
@@ -137,6 +147,57 @@ html[data-theme="dark"] {
       width: 100%;
     }
   }
+}
+
+// Darkmode
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }
 
 /* MEDIA QUERY */

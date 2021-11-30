@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router"
 import { Link } from "react-router-dom"
+import DarkLightSwitch from "./DarkLightSwitch"
 
 const MainContent = () => {
     return (
@@ -114,7 +115,8 @@ const Appearance = () => {
                     <section>
                         <h1>Appearance</h1>
                         <div className="div-container">
-                            <p>Content</p>
+                            <p>Switch</p>
+                            <DarkLightSwitch />
                         </div>
                     </section>
                 </div>
