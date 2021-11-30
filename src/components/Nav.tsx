@@ -4,29 +4,45 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
     return (
         <nav id="Nav">
-            <div className="nav-group">
+            <div className="nav-group nav-group-header">
                 <p>LOGO</p>
+                <p className="version">V0.1.0</p>
             </div>
 
-            <div className="nav-group">
+            <div className="nav-group nav-group-ul">
                 <ul className="nav-ul-topics">
                     <li className="nav-li-topics">
-                        <Link to="/">Topic 1</Link>
+                        <Link to="/">&#x2612;</Link>
                     </li>
                     <li className="nav-li-topics">
-                        <Link to="/topic2">Topic 2</Link>
+                        <Link to="/topic2">&#x2612;</Link>
                     </li>
                     <li className="nav-li-topics">
-                        <Link to="/topic3">Topic 3</Link>
+                        <Link to="/topic3">&#x2612;</Link>
                     </li>
                     <li className="nav-li-topics">
-                        <Link to="/topic4">Topic 4</Link>
+                        <Link to="/topic4">&#x2612;</Link>
                     </li>
                     <li className="nav-li-topics">
-                        <Link to="/topic5">Topic 5</Link>
+                        <Link to="/topic5">&#x2612;</Link>
+                    </li>
+                </ul>
+                <ul className="nav-ul-topics nav-ul-topics-last">
+                    <li className="nav-li-topics">
+                        <Link to="/settings">&#x2612;</Link>
+                    </li>
+                    <li className="nav-li-topics">
+                        <Link to="/">Logout</Link>
                     </li>
                 </ul>
             </div>
+            {/* <div className="nav-group">
+                <ul className="nav-ul-topics">
+                    <li className="nav-li-topics">
+                        <Link to="/settings">&#x2612;</Link>
+                    </li>
+                </ul>
+            </div> */}
         </nav>
     )
 }
