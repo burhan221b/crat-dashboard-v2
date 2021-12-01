@@ -62,6 +62,7 @@ html[data-theme="dark"] {
   }
   div.nav-group-ul {
     height: 100%;
+    max-height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
